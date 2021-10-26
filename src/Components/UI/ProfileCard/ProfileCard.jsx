@@ -1,6 +1,7 @@
 import React from "react";
 
 import ProfilePic from "../../../Assets/Img/demo.jpg";
+import Buttons from "../Buttons/Buttons";
 
 const ProfileCard = () => {
   return (
@@ -13,9 +14,7 @@ const ProfileCard = () => {
         />
         <p className=" username">username</p>
       </div>
-      <button className="grid my-auto text-sm text-blue-600 justify-self-end ">
-        View Profile
-      </button>
+      <Buttons text="View Profile" />
     </div>
   );
 };

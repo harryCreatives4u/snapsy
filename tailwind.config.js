@@ -10,13 +10,16 @@ module.exports = {
       },
       width: {
         post: "614px",
+        "fit-content": "fit-content",
       },
       maxWidth: {
         workspace: "1300px",
         post: "614px",
       },
       height: {
+        "screen-8": "80vh",
         post: "614px",
+        90: "90%",
       },
     },
   },
