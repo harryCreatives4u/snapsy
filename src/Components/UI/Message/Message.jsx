@@ -11,7 +11,7 @@ const Message = (props) => {
     <div
       className={`p-2 py-1 m-2  rounded-lg ${messageFormatting}   w-fit-content`}
     >
-      hey there
+      {props.text}
     </div>
   );
 };
