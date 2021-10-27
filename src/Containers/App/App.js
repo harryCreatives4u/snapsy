@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "../../Components/UI/Header/Header";
 import Homepage from "../Homepage/Homepage";
 import Messenger from "../Messenger/Messenger";
+import UserProfile from "../UserProfile/UserProfile";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
           </Route>
           <Route path="/chats">
             <Messenger />
+          </Route>
+          <Route path="/profile">
+            <UserProfile />
           </Route>
         </Switch>
       </div>

@@ -21,6 +21,9 @@ module.exports = {
         post: "614px",
         90: "90%",
       },
+      minHeight: {
+        "screen-8": "80vh",
+      },
     },
   },
   variants: {

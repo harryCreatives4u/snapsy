@@ -15,3 +15,21 @@ body {
 .postImg {
   aspect-ratio: 1/1;
 }
+
+.thumbnail {
+  position: relative;
+}
+.thumbnail:before {
+  content: " ";
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+}
+.thumbnail > img {
+  position: absolute;
+  object-fit: fill;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+}
