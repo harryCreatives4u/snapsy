@@ -47,7 +47,7 @@ const StoryHeader = () => {
         options={{
           rewind: false,
           gap: "1rem",
-          perPage: 7,
+          perPage: 6,
           arrows: true,
           pagination: false,
           lazyLoad: true,

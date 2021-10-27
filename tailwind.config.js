@@ -18,11 +18,15 @@ module.exports = {
       },
       height: {
         "screen-8": "80vh",
+        "screen-9": "90vh",
         post: "614px",
         90: "90%",
       },
       minHeight: {
         "screen-8": "80vh",
+      },
+      inset: {
+        "-9": "-9%",
       },
     },
   },
