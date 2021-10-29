@@ -12,11 +12,11 @@ const ChatWindow = (props) => {
       </div>
       <input
         placeholder="Type a message"
-        className="absolute right-0 z-30 w-full h-12 px-4 border border-gray-500 rounded-full bottom-4 "
+        className="right-0 z-30 w-full h-12 px-4 border border-gray-500 rounded-full bottom-4"
       />
       <button
         text="Send"
-        className="absolute z-40 text-sm text-blue-600 bottom-7 right-4 "
+        className="absolute z-40 text-sm text-blue-600 bottom-12 right-4 "
       >
         Send
       </button>

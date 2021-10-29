@@ -9,7 +9,7 @@ const Message = (props) => {
 
   return (
     <div
-      className={`p-3 py-2 m-2  rounded-lg  w-fit-content ${messageFormatting}`}
+      className={`p-3 py-2 m-2 mx-4 xl:mx-2  rounded-lg  w-fit-content ${messageFormatting}`}
     >
       {props.text}
     </div>

@@ -17,7 +17,7 @@ const ChatList = (props) => {
           props.toggleMenu();
           console.log("yo");
         }}
-        className="absolute text-2xl font-black text-gray-400 top-4 right-4"
+        className="absolute text-2xl font-black text-gray-400 top-4 right-4 md:hidden"
       >
         X
       </button>

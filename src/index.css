@@ -12,6 +12,31 @@ body {
   background: #fafafa;
 }
 
+.authBG {
+  background: linear-gradient(
+    -45deg,
+    #feed07 0%,
+    #fe6a50 5%,
+    #ed00aa 15%,
+    #2fe3fe 50%,
+    #8900ff 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .postImg {
   aspect-ratio: 1/1;
 }
@@ -19,12 +44,14 @@ body {
 .thumbnail {
   position: relative;
 }
+
 .thumbnail:before {
   content: " ";
   display: block;
   width: 100%;
   padding-top: 100%;
 }
+
 .thumbnail > img {
   position: absolute;
   object-fit: fill;
