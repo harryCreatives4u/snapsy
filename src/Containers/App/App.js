@@ -11,7 +11,7 @@ import AuthPage from "../AuthPage/AuthPage";
 function App(props) {
   return (
     <div className="flex flex-col items-center justify-center min-h-full debug-screens ">
-      {props.auth ? (
+      {!props.auth ? (
         <>
           <Header />
           <div className="container relative flex justify-between pt-20 mx-auto max-w-workspace lg:w-11/12 xl:w-4/5 2xl:w-10/12">

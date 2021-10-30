@@ -11,6 +11,7 @@ module.exports = {
       width: {
         post: "614px",
         "fit-content": "fit-content",
+        "40%": "40%",
       },
       maxWidth: {
         workspace: "1300px",

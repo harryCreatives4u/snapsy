@@ -11,9 +11,7 @@ const Sidebar = () => {
       <ProfileCard />
       <ProfileCard />
       <ProfileCard />
-      <ProfileCard />
-      <ProfileCard />
-      <ProfileCard />
+      {/* <button></button> */}
     </div>
   );
 };

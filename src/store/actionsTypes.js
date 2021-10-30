@@ -12,16 +12,22 @@ const authSuccess = (userId, email, username) => {
   };
 };
 
-export const startAuth = (userId, email, username) => {
-  console.log("auth started with" + userId, email, username);
+export const authUser = (userId, email, username) => {
   return (dispatch) => {
     const userData = {
+      userId: userId,
       email: email,
       username: username,
       posts: [],
     };
-    axios
-      .put(`${databaseUrl}/users/${userId}.json`, userData)
-      .then(() => dispatch(authSuccess(userId, email, username)));
+    axios.get(`${databaseUrl}/users/${userId}.json`).then((res) => {
+      if (res.data === null) {
+        axios
+          .put(`${databaseUrl}/users/${userId}.json`, userData)
+          .then(() => dispatch(authSuccess(userId, email, username)));
+      } else {
+        dispatch(authSuccess(userId, email, username));
+      }
+    });
   };
 };
