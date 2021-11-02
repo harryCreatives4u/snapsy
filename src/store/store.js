@@ -7,6 +7,7 @@ const initialState = {
     email: null,
     username: null,
   },
+  loading: false,
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -21,6 +22,9 @@ const rootReducer = (state = initialState, action) => {
           username: action.username,
         },
       };
+    }
+    case actions.START_LOADING: {
+      return { ...state, loading: true };
     }
     default:
       return state;

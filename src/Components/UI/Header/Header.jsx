@@ -9,7 +9,6 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
-import "./Header.css";
 import Logo from "../../../Assets/Img/logo.png";
 
 const Header = () => {
