@@ -2,11 +2,11 @@ import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import { connect } from "react-redux";
 
 import "./App.css";
-import Header from "../../Components/UI/Header/Header";
-import Homepage from "../Homepage/Homepage";
-import Messenger from "../Messenger/Messenger";
-import UserProfile from "../UserProfile/UserProfile";
-import AuthPage from "../AuthPage/AuthPage";
+import Header from "../../Components/UI/Header";
+import Homepage from "../Pages/Homepage";
+import Messenger from "../Pages/Messenger";
+import UserProfile from "../Pages/UserProfile";
+import AuthPage from "../Pages/AuthPage";
 
 function App(props) {
   return (
@@ -22,8 +22,11 @@ function App(props) {
               <Route path="/chats">
                 <Messenger />
               </Route>
-              <Route path="/profile">
+              <Route path="/profile/:user">
                 <UserProfile />
+              </Route>
+              <Route path="/my-profile/">
+                <UserProfile defaultUser={props.user} />
               </Route>
             </Switch>
           </div>
@@ -38,6 +41,7 @@ function App(props) {
 const mapStateToProps = (state) => {
   return {
     auth: state.isAuth,
+    user: state.user,
   };
 };
 

@@ -1,24 +1,26 @@
 import React, { useRef } from "react";
 
-import Message from "../../Components/UI/Message/Message";
+import Message from "../UI/Message";
+import LoadingSpinner from "../UI/LoadingSpinner";
 
 const ChatWindow = (props) => {
   const msgTextRef = useRef(null);
   return (
     <>
       <div className="flex flex-col w-full overflow-y-scroll h-90 ">
-        {props.messages.map(
-          (message) => (
-            console.log(message),
-            (
-              <Message
-                text={message.text}
-                activeUser={props.activeUser}
-                userId={message.user}
-                sent={message.sent}
-              />
-            )
-          )
+        {props.messages.length > 0 ? (
+          props.messages.map((message, i) => (
+            <Message
+              key={Math.random() + i}
+              text={message.text}
+              activeUser={props.activeUser}
+              userId={message.user}
+            />
+          ))
+        ) : (
+          <div className="w-8/12 m-auto postImg">
+            <LoadingSpinner />
+          </div>
         )}
       </div>
       <form

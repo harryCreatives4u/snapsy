@@ -9,7 +9,7 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
-import Logo from "../../../Assets/Img/logo.png";
+import Logo from "../../Assets/Img/logo.png";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -34,9 +34,13 @@ const Header = () => {
           <div
             className={`fixed z-50 left-0 flex ${
               menuOpened ? "top-12" : "-top-full"
-            } flex-col items-center justify-around w-full my-auto text-base align-middle transition-all bg-white md:justify-between md:text-xl md:static md:flex-row h-60 md:h-full md:bg-none top-full md:w-1/5`}
+            } flex-col items-center justify-around  w-full  text-base align-middle transition-all h-60 bg-white md:justify-between md:text-xl md:static md:flex-row  md:h-full md:bg-none md:w-1/5`}
           >
-            <NavLink className="flex flex-row items-center md:flex-row" to="/">
+            <NavLink
+              onClick={() => setMenuOpened(false)}
+              className="flex flex-row items-center md:flex-row"
+              to="/"
+            >
               <FontAwesomeIcon
                 icon={faHome}
                 className="mr-4 cursor-pointer md:mr-0"
@@ -44,6 +48,7 @@ const Header = () => {
               <p className="md:hidden">Home</p>
             </NavLink>
             <NavLink
+              onClick={() => setMenuOpened(false)}
               className="flex flex-row items-center md:flex-row"
               to="/chats"
             >
@@ -54,8 +59,9 @@ const Header = () => {
               <p className="md:hidden">Chats</p>
             </NavLink>
             <NavLink
+              onClick={() => setMenuOpened(false)}
               className="flex flex-row items-center md:flex-row"
-              to="/profile"
+              to="/my-profile"
             >
               <FontAwesomeIcon
                 icon={faUser}

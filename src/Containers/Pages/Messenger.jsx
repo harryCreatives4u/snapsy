@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import ChatList from "../../Components/ChatList/ChatList";
-import ChatWindow from "../../Components/ChatWindow/ChatWindow";
+import ChatList from "../../Components/MessengerComponents/ChatList";
+import ChatWindow from "../../Components/MessengerComponents/ChatWindow";
 
 import { chatDb } from "../../firebase/firebase";
 import {
@@ -25,6 +25,7 @@ const Messenger = (props) => {
   const changeChatroomHandler = (chatroom) => {
     if (activeChatroom !== chatroom) {
       setMesages([]);
+      setMenuOpened(false);
       setActiveChatroom(chatroom);
     }
   };
@@ -33,7 +34,7 @@ const Messenger = (props) => {
     const q = query(
       collection(chatDb, `${activeChatroom}-Chatroom`),
       orderBy("created-at"),
-      limit(5)
+      limit(50)
     );
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const oldMsgs = [...messages];
@@ -54,13 +55,11 @@ const Messenger = (props) => {
     const firestoreDbRef = doc(
       collection(chatDb, `${activeChatroom}-Chatroom`)
     );
-
     const data = {
       text: message,
       "created-at": Timestamp.fromDate(new Date()),
       user: props.user.userId,
     };
-
     setDoc(firestoreDbRef, data);
   };
 

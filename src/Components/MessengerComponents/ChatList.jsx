@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 import image from "../../Assets/Img/demo.jpg";
-import Buttons from "../UI/Buttons/Buttons";
+import Buttons from "../UI/Buttons";
 
 const ChatList = (props) => {
   return (
@@ -22,6 +22,7 @@ const ChatList = (props) => {
       <h1 className="mb-6 text-xl font-medium uppercase">Chatrooms</h1>
       {props.chatrooms.map((chatroom) => (
         <div
+          key={chatroom}
           className={`flex items-center justify-between p-4 mb-4 ${
             chatroom === props.activeChatroom ? "bg-gray-400" : "bg-gray-200"
           }  rounded-xl h-14 `}

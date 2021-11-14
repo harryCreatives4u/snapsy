@@ -1,7 +1,7 @@
 import React from "react";
 
-import ProfilePic from "../../../Assets/Img/demo.jpg";
-import Buttons from "../Buttons/Buttons";
+import ProfilePic from "../../Assets/Img/demo.jpg";
+import Buttons from "./Buttons";
 
 const ProfileCard = () => {
   return (
