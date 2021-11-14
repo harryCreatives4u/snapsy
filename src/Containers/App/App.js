@@ -10,7 +10,7 @@ import AuthPage from "../Pages/AuthPage";
 
 function App(props) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-full debug-screens ">
+    <div className="flex flex-col items-center justify-center min-h-full ">
       {props.auth ? (
         <>
           <Header />
