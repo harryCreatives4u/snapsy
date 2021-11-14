@@ -13,7 +13,7 @@
 /test.text
 
 #confidential info
-/src/firebase/firebaseConfig.js
+# /src/firebase/firebaseConfig.js
 
 # misc
 .DS_Store
