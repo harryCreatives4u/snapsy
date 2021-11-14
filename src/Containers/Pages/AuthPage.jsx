@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import GoogleLogin from "react-google-login";
 import { connect } from "react-redux";
 
@@ -7,7 +7,6 @@ import LoadingSpinner from "../../Components/UI/LoadingSpinner";
 
 import * as actions from "../../store/actionsTypes";
 import { apiClientId } from "../../firebase/firebaseConfig";
-
 
 const AuthPage = (props) => {
   const [username, setUsername] = useState("");
