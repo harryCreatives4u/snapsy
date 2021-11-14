@@ -57,6 +57,7 @@
     "tailwindcss-debug-screens": "^2.2.0"
   },
   "engines": {
+    "npm":"6.14.13" ,
     "node": "14.17.0"
   }
 }
