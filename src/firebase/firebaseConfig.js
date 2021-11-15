@@ -4,4 +4,4 @@ export const firebaseConfig = {
 
 export const apiClientId ="google api id";
 
-export const databaseUrl = "https://talktack-dev-default-rtdb.firebaseio.com";
+export const databaseUrl = "...database url";
